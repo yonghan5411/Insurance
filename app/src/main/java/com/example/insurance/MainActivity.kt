@@ -28,10 +28,7 @@ class MainActivity : AppCompatActivity() {
             myData.totalPremium = 0
         }
 
-
-
-
-
+        
 
     }
 
