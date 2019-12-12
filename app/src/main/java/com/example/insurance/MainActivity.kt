@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         myData = ViewModelProviders.of(this).get(MyDataModel::class.java)
         display()
+
         buttonCalculate.setOnClickListener {
             myData.totalPremium = cal()
             display()
@@ -28,13 +29,14 @@ class MainActivity : AppCompatActivity() {
             myData.totalPremium = 0
         }
 
-        
+
 
     }
 
     fun display() {
-        if(myData.totalPremium != 0)
-        textViewPremium.text = "Total Premium: Rm " + cal().toString()
+        if(myData.totalPremium != 0) {
+            textViewPremium.text = "Total Premium: Rm " + myData.totalPremium.toString()
+        }
     }
 
     fun cal(): Int {
